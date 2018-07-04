@@ -14,36 +14,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from polls import views
-
 from django.contrib import admin
 from django.urls import path
-
-
+from polls import views
 from polls import id
 
-
-
+#Register your urls here.
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('id/', admin.site.urls),
     path('',id.LoginView.as_view()),
+    path('admin/', admin.site.urls),
     path('logout/',id.LogoutView.as_view()),
     path('backoffice/',id.Log.as_view()),
 
-    path('A1/',views.A1.as_view()),
-    path('A2/',views.A2.as_view()),
-    path('A3/',views.A3.as_view()),
-    path('A4/',views.A4.as_view()),
-    path('A5/',views.A5.as_view()),
-    path('A6/',views.A6.as_view()),
-    path('A7/',views.A7.as_view()),
-
-
-    #ajouter le path
+    path('backoffice/A1/',views.A1.as_view()),
+    path('backoffice/A2/',views.A2.as_view()),
+    path('backoffice/A3/',views.A3.as_view()),
+    path('backoffice/A4/',views.A4.as_view()),
+    path('backoffice/A5/',views.A5.as_view()),
+    path('backoffice/A6/',views.A6.as_view()),
+    path('backoffice/A7/',views.A7.as_view()),
 
 ]
-
-
-#7redr
